@@ -2,8 +2,13 @@
 <!-- Your code here -->
   <h1>shorten!</h1>
   <form name="linkForm" ng-submit='addLink()'>
-    <input type='text' ng-model='link'>
-    <button>Sumit Link for Shortening!</button>
+    <input type='url' name='input' ng-model='link.url' required>
+    <span ng-show="linkForm.input.$error.required">
+      Required!</span>
+    <span ng-show="linkForm.input.$error.url">
+      Not valid url, please prefix http://</span>
+    <br>
+    <button>Submit Link for Shortening!</button>
   </form>
   <a href="#/links">View Links</a>
 </div>

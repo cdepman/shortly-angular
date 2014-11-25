@@ -1,8 +1,8 @@
-<div id='container' ng-controller="LinksController">
+<div id='container'>
   <!-- Your html here -->
-  <h1>Links!</h1>
-  <a href="#/shorten">View Shorten Links</a>
+  <h1 style="padding-left:10px">Links!</h1>
+  <a href="#/shorten" style="padding-left:10px">View Shorten Links</a>
   <ul>
-    <li ng-repeat="link in links"> {{link}} </li>
+    <li ng-repeat="link in data.links"> {{link}} {{ link.url }} <br> {{ 'shortly.com/' + link.code }} </li>
   </ul>
 </div>

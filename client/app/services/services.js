@@ -15,6 +15,7 @@ angular.module('shortly.services', [])
       data: link
     });
   };
+
   return {
     retrieveLinks: retrieveLinks,
     addLink: addLink
