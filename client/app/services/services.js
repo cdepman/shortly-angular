@@ -1,7 +1,17 @@
 angular.module('shortly.services', [])
 
 .factory('Links', function ($http) {
-  // Your code here
+  //talk to api/links to retrieve links
+  var retrieveLinks = function(){
+    return $http({
+      method: 'GET',
+      url: '/api/links'
+    });
+  };
+
+  return {
+    retrieveLinks: retrieveLinks
+  };
 })
 .factory('Auth', function ($http, $location, $window) {
   // Don't touch this Auth service!!!
@@ -47,6 +57,6 @@ angular.module('shortly.services', [])
     signin: signin,
     signup: signup,
     isAuth: isAuth,
-    signout: signout
+    signout: signout,
   };
 });
