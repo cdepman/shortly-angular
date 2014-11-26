@@ -23,6 +23,9 @@ angular.module('shortly', [
       templateUrl: 'app/shorten/shorten.html',
       controller: 'ShortenController'
     })
+    // .when('CHECK FOR CODE SOMEHOW, {
+    //   redirect to that page SOMEHOW
+    // })
     .otherwise({
       templateUrl: 'app/links/links.html',
       controller: 'LinksController'

@@ -1,8 +1,19 @@
 <div id='container'>
-  <!-- Your html here -->
-  <h1 style="padding-left:10px">Links!</h1>
-  <a href="#/shorten" style="padding-left:10px">View Shorten Links</a>
+  <span><p class="pageTitle">Links</p></span>
+  <form>
+    <input type="search" name="search" placeholder="Search" ng-model="searchText" id="searchBar">
+  </form>
   <ul>
-    <li ng-repeat="link in data.links"> {{link}} {{ link.url }} <br> {{ 'shortly.com/' + link.code }} </li>
+    <li ng-repeat="link in data.links | orderBy:'-visits' | filter: searchText"> {{ link.url }}
+      <br>
+      <a href="/api/links/{{link.code}}">{{ 'shortly.com/' + link.code}}</a>
+      <div class="visitCount">{{link.visits}}</div>
+    </li>
   </ul>
+  <a href="#/shorten" class="navLink">Go shortly more links!</a>
 </div>
+
+
+
+<!-- allow visitor to click shortened code link -> localhost:3000/code
+should send get request for that url which calls nav to link and increments counter for us on serverside -->
