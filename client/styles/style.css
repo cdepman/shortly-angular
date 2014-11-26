@@ -3,7 +3,7 @@ body {
   margin-top: 10px;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  color: #5EE5BF;
+  color: #3AC09A;
 }
 .main, #shortly {
   top: 35%;
@@ -13,7 +13,7 @@ body {
 #shortly {
   font-size: 3em;
   font-weight: 100;
-  color: #5EE5BF;
+  color: #3AC09A;
 }
 .pageTitle {
   display: inline;
@@ -23,12 +23,15 @@ body {
 .main #container .navLink {
   font-size: 16px;
 }
+
 form #searchBar{
-  font-size: 18px;
+  font-size: 17px;
+  font-family: 'Lato';
   height: 30px;
   position: relative;
   right: 10px;
   margin-top: 20px;
+  color: #3AC09A;
 }
 a, a:visited {
   /*color: #333;*/
@@ -138,34 +141,38 @@ li {
 .link .info {
   margin-left: 55px;
 }
-
-form {
-  margin: 10px;
+#shortenSubmit {
+  position: absolute;
+  right: 254px;
+  top: 120px;
+  height: 28px;
 }
-
-input {
-  width: 360px;
-  display: block;
-  font-size: 13px;
-  padding: 5px;
-  margin-bottom: 5px;
+button {
+  border: 1px solid #3AC09A;
+  background-color: white;
+  box-shadow: none;
 }
-
-input[type=url] {
-  display: inline
-}
-
-input[type=url]:focus {
+button:focus {
   outline: none;
 }
-
-
-.error {
-  border: red solid 4px;
-  padding: 10px;
-  margin: 0 10px;
+input {
+  border: 1px solid #3AC09A;
+  width: 360px;
+  display: block;
+  font-size: 12px;
+  padding: 5px;
+  margin-bottom: 5px;
+  color: #3AC09A;
 }
-
+input:focus {
+  outline: none;
+}
+.errorMessage {
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: #FF7B2C;
+}
 .clean {
   border: #efe solid 2px;
   padding: 10px;

@@ -1,14 +1,14 @@
 <div id='container'>
 <!-- Your code here -->
-  <h1>shorten!</h1>
-  <form name="linkForm" ng-submit='addLink()'>
+  <p>Enter link to shorten:</p>
+  <form id="shortenForm" name="linkForm" ng-submit='addLink()'>
     <input type='url' name='input' ng-model='link.url' required>
-    <span ng-show="linkForm.input.$error.required">
+    <span class="errorMessage" ng-show="linkForm.input.$error.required">
       Required!</span>
-    <span ng-show="linkForm.input.$error.url">
+    <span class="errorMessage" ng-show="linkForm.input.$error.url">
       Not valid url, please prefix http://</span>
     <br>
-    <button>Submit Link for Shortening!</button>
+    <button id='shortenSubmit'>Submit</button>
   </form>
   <a href="#/links">View Links</a>
 </div>
